@@ -26,5 +26,7 @@ urlpatterns = [
     #week 2 t 5
     path(route='logout/', view=views.logout_request, name='logout'),
 
+    path('dealer/<int:dealer_id>/', view=views.get_dealer_details, name='dealer_details'),
+    path(route='addreview/<int:dealer_id>/', view=views.add_review, name='add_review')
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
